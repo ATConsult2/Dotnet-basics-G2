@@ -35,7 +35,8 @@ namespace andestech.learning2022.krasn
                 byte b1;
                 byte b2;
 
-                if (!(byte.TryParse(n1, out b1) && byte.TryParse(n2, out b2)))
+                // if (!(byte.TryParse(n1, out b1) && byte.TryParse(n2, out b2)))
+                if (!byte.TryParse(n1, out b1) || !byte.TryParse(n2, out b2))
                 {
                     b1 = b2 = 0;
                     WriteLine("Wrong number format!!");
@@ -43,8 +44,12 @@ namespace andestech.learning2022.krasn
 
                 // byte b1 = byte.Parse(n1);
                 // byte b2 = byte.Parse(n2);
-
-                byte result = (byte)(b1 + b2);
+                byte result;
+                checked
+                {
+                    result = (byte)(b1 + b2);
+                }
+                
                 WriteLine($"{b1}+{b2} = {result}");
             }
         }
