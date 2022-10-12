@@ -47,6 +47,7 @@ namespace andestech.learning2022.krasn
                 byte result;
                 checked
                 {
+                    // byte result = checked((byte)(b1 + b2));
                     result = (byte)(b1 + b2);
                 }
                 
@@ -54,12 +55,48 @@ namespace andestech.learning2022.krasn
             }
         }
 
+        static void checkSize()
+        {
+            WriteLine($"Max byte: {byte.MaxValue}");
+            //WriteLine($"Max char: {char.MaxValue}");
+            WriteLine($"Max ushort: {ushort.MaxValue}");
+            WriteLine($"Max uint: {uint.MaxValue}");
+            WriteLine($"Max ulong: {ulong.MaxValue}");
 
+          
+        }
         static void Main(string[] args)
         {
-           // testIOConsole();
-           makeCalculus();
-           // ReadKey();
+            //testIOConsole();
+            //makeCalculus();
+            checkSize();
+            Write("a\ta\ta\ta\n");
+           
+            for (int i = 0; i < 5; i++)
+            {
+                WriteLine(i);
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                WriteLine(i);
+            }
+
+            
+            WriteLine("-------------------------------------------");
+            {
+                int i = 0;
+                while (i < 5)
+                {
+                    WriteLine(++i);
+                   // i++;
+                }
+            }
+
+
+
+
+            //ReadKey();
         }
     }
 }
