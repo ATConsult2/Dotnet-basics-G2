@@ -47,6 +47,7 @@
     <Compile Include="Car3.cs" />
     <Compile Include="Car2.cs" />
     <Compile Include="Car.cs" />
+    <Compile Include="ClassStruct.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

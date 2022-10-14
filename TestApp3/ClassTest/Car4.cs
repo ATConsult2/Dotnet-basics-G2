@@ -3,8 +3,15 @@ using static System.Console;
 
 namespace andestech.learning2022.krasn.geer
 {
-    public class Car4
+    public class Car4 //: object
     {
+        public const string TestStend = "11-dd-AA-2022";
+        public readonly static string Metadata;
+
+        static Car4() {
+            WriteLine("+++ static ctor of Car4");
+            Metadata = "MyData";
+        }
         
         public string Vendor { get; }
         public int Power { get;}
@@ -34,5 +41,11 @@ namespace andestech.learning2022.krasn.geer
             return $"Car4 {Vendor}, Power: {Power}, Mass: {Mass}.";
             
         }
+        public override string ToString()
+        {
+            return getInfo();
+        }
+
+
     }
 }
