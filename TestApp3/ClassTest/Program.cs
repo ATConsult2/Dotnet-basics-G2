@@ -26,6 +26,12 @@ namespace andestech.learning2022.krasn
             //----------------
             Car3 car33 = new Car3("UAZ",120,1800);
             WriteLine(car33.getInfo());
+            car33 = new Car3("KIA", 120, 1350);
+            WriteLine(car33.getInfo());
+            //------------------
+            Car4 car44 = new Car4("Audi", 130, 1600);
+            WriteLine(car44.getInfo());
+
 
             //car33.Power = 111;
 

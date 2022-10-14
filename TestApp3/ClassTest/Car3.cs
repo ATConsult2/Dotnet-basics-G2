@@ -27,7 +27,7 @@ namespace andestech.learning2022.krasn.geer
 
         public Car3()
         {
-            WriteLine("+++ ctor default of Car3.");
+            WriteLine("+++ ctor default of Car3, id:" + this.GetHashCode());
         }
 
         /* public Car3(string vendor, int power, int mass):this()  
