@@ -6,23 +6,23 @@ using static System.Console;
 
 namespace andestech.learning2022.krasn
 {
-    internal class Car2 : Vehicle2
+    internal class Truck2 : Vehicle2
     {
         internal protected int Weels { get; private set; }
-        internal protected Engine Car2Engine { get; private set; }
-        public Car2(string model, int power, Engine engine, int weels = 4) : base(model, power)
+        internal protected Engine Truck2Engine { get; private set; }
+        public Truck2(string model, int power, Engine engine, int weels = 24) : base(model, power)
         {
-            Car2Engine = engine;
+            Truck2Engine = engine;
             Weels = weels;
-            WriteLine("+++ ctor Car2 " + GetHashCode());
+            WriteLine("+++ ctor Truck2 " + GetHashCode());
         }
         public override void Move()
         {
-            WriteLine("Car2 move: " + GetHashCode());
+            WriteLine("Truck2 move: " + GetHashCode());
         }
         public override string ToString()
         {
-            return $"Car2 -> {base.ToString()}\b, weels:{Weels}, {Car2Engine}.";
+            return $"Truck2 -> {base.ToString()}\b, weels:{Weels}, {Truck2Engine}.";
         }
     }
 }

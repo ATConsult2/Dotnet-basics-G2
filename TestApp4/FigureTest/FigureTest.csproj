@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8C86E174-4659-4D85-A0F4-84EFCBEFCD00}</ProjectGuid>
+    <ProjectGuid>{1710734B-07EB-4D30-B23A-D7DF3AB0CF38}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp1</RootNamespace>
-    <AssemblyName>ConsoleApp1</AssemblyName>
+    <RootNamespace>FigureTest</RootNamespace>
+    <AssemblyName>FigureTest</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMovable.cs" />
-    <Compile Include="Truck2.cs" />
-    <Compile Include="Car2.cs" />
+    <Compile Include="Circle.cs" />
+    <Compile Include="Figure.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Singleton.cs" />
-    <Compile Include="Vehicle.cs" />
-    <Compile Include="Vehicle2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

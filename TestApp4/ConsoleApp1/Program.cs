@@ -35,6 +35,31 @@ namespace andestech.learning2022.krasn
             Object o = new Car("Audi", 250, new Engine(300, 250, EngineType.Bensine));
             Car2 car3 = (Car2)o;
 
+            //1 met, as operator
+            Car2 car33 = o as Car2;
+            //if (car33 != null) car33.Move();
+            car33?.Move();
+
+            //2 met, is operator
+            if (o is Car car44) car44.Move();
+
+            // 
+            WriteLine(new String('-', 11) + "Polimotf Test" + new String('-', 11));
+            testVehicle(new Car2("BMW", 250, new Engine(300, 150, EngineType.Bensine)));
+            testVehicle(new Truck2("BMW", 600, new Engine(600, 600, EngineType.Diesel)));
+
+
+
+
+        }
+
+        // static void testVehicle(Vehicle2 v2)
+        static void testVehicle(IMovable v2)
+        {
+            //.....
+            v2.Move();
+           // v2.Move(10);
+           // v2.Rotate();
         }
     }
 }
