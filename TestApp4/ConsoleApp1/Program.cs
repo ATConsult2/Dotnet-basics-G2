@@ -29,6 +29,11 @@ namespace andestech.learning2022.krasn
             WriteLine(new String('-', 11) + "Virtual Test" + new String('-', 11));
             Vehicle v2 = new Car("BMW", 250, new Engine(300, 150, EngineType.Bensine));
             v2.Move();
+            Vehicle2 v22 = new Car2("BMW", 250, new Engine(300, 150, EngineType.Bensine));
+            v22.Move();
+
+            Object o = new Car("Audi", 250, new Engine(300, 250, EngineType.Bensine));
+            Car2 car3 = (Car2)o;
 
         }
     }
