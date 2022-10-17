@@ -9,7 +9,7 @@ namespace andestech.learning2022.krasn
     internal class Vehicle : object
     {
         protected String Model { get; private set; }
-        protected int Power { get; private set; } // params
+        internal protected int Power { get; private set; } // params
 
         public Vehicle(string model, int power)
         {
@@ -20,16 +20,20 @@ namespace andestech.learning2022.krasn
 
         public override string ToString()
         {
-            return $"Vehicle: Model \"{Model}\", Power -> {Power} ";
+            return $"Vehicle: Model \"{Model}\", Power -> {Power}.";
         }
     }
 
 
     enum EngineType { 
-     Bensine,
-     Diesel,
-     Gas
+     Bensine=1,
+     Diesel=2,
+     Gas=4,
+     Electro=8,
+     Hydrogene=16,
+     Turbo=32
     }
+
     internal class Engine { 
       public int Mass { get; private set; }
       public int Power { get; private set; }
@@ -40,17 +44,27 @@ namespace andestech.learning2022.krasn
             Mass = mass;
             Power = power;
             EType = eType;
-        }   
+        }
+
+        public override string ToString()
+        {
+            return $"Engine: power->{Power}, mass->{Mass}, type->{EType.ToString()}";
+        }
     }
     internal class Car : Vehicle
     {
-        public int Weels { get; private set; }
-        public Engine CarEngine { get; private set; }
+        internal protected int Weels { get; private set; }
+        internal protected Engine CarEngine { get; private set; }
         public Car(string model, int power, Engine engine, int weels = 4) : base(model, power)
         {
             CarEngine = engine;
             Weels = weels;
             WriteLine("+++ ctor Car " + GetHashCode());
+        }
+
+        public override string ToString()
+        {
+            return $"Car -> {base.ToString()}\b, weels:{Weels}, {CarEngine}.";
         }
     }
 }

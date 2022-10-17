@@ -17,9 +17,12 @@ namespace andestech.learning2022.krasn
             //----------------------------
             Vehicle v1 = new Vehicle(power: 122_000, model: "AA-1223");
             WriteLine(v1);
+            WriteLine("Power: " + v1.Power); // internal protected!!
             //-----------------------------
             WriteLine(new String('-', 55));
-            Car car = new Car("BMW", 200);
+            Car car = new Car("BMW", 200, new Engine(300,150,EngineType.Bensine));
+            //WriteLine("Power: " + car.Power); // protected!!
+            WriteLine("Engine Power: " + car.CarEngine.Power);
             WriteLine(car);
 
         }
