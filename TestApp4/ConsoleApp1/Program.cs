@@ -24,6 +24,11 @@ namespace andestech.learning2022.krasn
             //WriteLine("Power: " + car.Power); // protected!!
             WriteLine("Engine Power: " + car.CarEngine.Power);
             WriteLine(car);
+            //------------------------------
+
+            WriteLine(new String('-', 11) + "Virtual Test" + new String('-', 11));
+            Vehicle v2 = new Car("BMW", 250, new Engine(300, 150, EngineType.Bensine));
+            v2.Move();
 
         }
     }

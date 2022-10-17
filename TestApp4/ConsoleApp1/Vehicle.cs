@@ -11,6 +11,11 @@ namespace andestech.learning2022.krasn
         protected String Model { get; private set; }
         internal protected int Power { get; private set; } // params
 
+        public void Move() {
+            WriteLine("Vehicle move: " + GetHashCode());
+        
+        }
+
         public Vehicle(string model, int power)
         {
             Model = model;
@@ -61,7 +66,10 @@ namespace andestech.learning2022.krasn
             Weels = weels;
             WriteLine("+++ ctor Car " + GetHashCode());
         }
-
+        public new void Move()
+        {
+            WriteLine("Car move: " + GetHashCode());
+        }
         public override string ToString()
         {
             return $"Car -> {base.ToString()}\b, weels:{Weels}, {CarEngine}.";
