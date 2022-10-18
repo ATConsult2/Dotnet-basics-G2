@@ -18,7 +18,7 @@ namespace andestech.learning2022.krasn
             Circle circle = new Circle 
             { R = 10, PointXY = new Point { X = 1, Y = 2 } };
             WriteLine(circle);
-            WriteLine(String.Format("{0:#.###}",1.234567));
+          //  WriteLine(String.Format("{0:#.###}",1.234567));
 
 
         }
