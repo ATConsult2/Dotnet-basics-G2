@@ -174,7 +174,7 @@ namespace andestech.learning2022.krasn
             foreach (int key in dict.Keys) WriteLine(key + " ---> " + dict[key]);
             WriteLine("---------------------");
             var dict2 = dict.OrderBy(x => Math.Abs(x.Key)).
-                ToDictionary(x => x.Key,v => v.Value);
+            ToDictionary(x => x.Key);//,v => v.Value);
             foreach (int key in dict2.Keys) WriteLine(key + " ---> " + dict2[key]);
 
         }
