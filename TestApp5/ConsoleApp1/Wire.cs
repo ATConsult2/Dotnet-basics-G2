@@ -15,13 +15,30 @@ namespace andestech.learning2022.krasn
 
         public override string ToString()
         {
-            return "Wire: " + Length;
+            return $"Wire L->{Length}, Id->{GetHashCode()}";
         }
 
         public static Wire operator +(Wire w1, Wire w2)
         {
             return new Wire { Length = w1.Length + w2.Length };
         }
+
+        public static bool operator == (Wire w1, Wire w2)
+        {
+            return w1.Length == w2.Length ;
+        }
+
+        public static bool operator !=(Wire w1, Wire w2)
+        {
+            return w1.Length != w2.Length;
+        }
+
+        public static Wire operator *(Wire w1, double d)
+        {
+            return new Wire { Length = unchecked((int)(w1.Length*d))};
+        }
+
+
 
         public static Wire operator ++(Wire w1)
         {
