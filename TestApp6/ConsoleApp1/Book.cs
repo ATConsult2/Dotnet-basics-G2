@@ -14,5 +14,10 @@ namespace andestech.learning2022.krasn
         public string Author { get; set; }
 
         public int Id { get => _id; }
+
+        public override string ToString()
+        {
+            return $"Книга \"{Title}\", автор: {Author}.";
+        }
     }
 }

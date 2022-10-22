@@ -27,19 +27,23 @@ namespace andestech.learning2022.krasn
             Book book2 = new Book() { Author = "Alexei Tolstoi", Title = "Aelita" };
             WriteLine("Id:" + book2.Id);
             f1.SetValue(book2, 111222);
-            WriteLine("Id:" + book2.Id);
+            WriteLine("Id:" + book2.Id + "\n");
             // m1.InvokeMethod(book2, new object[]{arg1, arg2, ...})
 
-
-            // Assembly asm = Assembly.Load(
-            //    @"C:\Users\sand\projects\Krasnoyarsk-2022\Dotnet-basics-G2\TestApp6\ConsoleApp1\bin\Debug\ConsoleApp1.exe");
-            // Type type2 = asm.GetType("andestech.learning2022.krasn.Book");
-            // Book b2 =  Activator.CreateInstance(type2)
-
-            F1();
+                // Загрузим эту же сборку
+            Assembly asm = Assembly.LoadFrom(
+                // Замените на свой каталог!
+                 @"C:\Users\sand\projects\Krasnoyarsk-2022\Dotnet-basics-G2\TestApp6\ConsoleApp1\bin\Debug\ConsoleApp1.exe");
+            Type type2 = asm.GetType("andestech.learning2022.krasn.Book", true);
+            Book b2 = Activator.CreateInstance(type2) as Book; // default constructor
+            b2.Author = "Кен Кизи";
+            b2.Title = "Пролетая над гнездом кукушки";
+            WriteLine(b2 + "\n");
+            
             F2();
 
             Type typeLib = typeof(Library);
+            
             LibraryValueAttribute attr = typeLib.GetCustomAttribute(typeof(LibraryValueAttribute))
                 as LibraryValueAttribute;
             WriteLine("LibValue: " + attr.LibraryValue);
