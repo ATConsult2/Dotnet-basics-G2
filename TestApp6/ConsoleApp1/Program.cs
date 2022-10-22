@@ -46,7 +46,7 @@ namespace andestech.learning2022.krasn
 
         }
 
-        static void Main(string[] args)
+        static public void Main2(string[] args)
         {
             Thread.CurrentThread.CurrentCulture =
                 new System.Globalization.CultureInfo("en-US");
