@@ -98,7 +98,7 @@ namespace andestech.learning2022.krasn
                 double a = double.Parse(parts[0]);
                 double b = double.Parse(parts[2]);
                 string key = parts[1];
-                WriteLine($"{toCalc} = {calcMap[key](a, b)}");
+                WriteLine($"{parts[0]} {parts[1]} {parts[2]} = {calcMap[key](a, b)}");
 
 
             }
