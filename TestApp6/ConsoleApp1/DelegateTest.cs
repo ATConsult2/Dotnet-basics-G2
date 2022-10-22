@@ -10,7 +10,7 @@ namespace andestech.learning2022.krasn
 {
     public delegate void GreetsHandler(string name, int importance);
 
-    internal class Program
+    internal class DelegateTest
     {
         delegate void GreetsHandler(string name, int importance);
 

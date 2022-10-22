@@ -9,7 +9,10 @@ namespace andestech.learning2022.krasn
 {
     internal class Book
     {
+        private int _id;
         public string Title { get; set; }   
         public string Author { get; set; }
+
+        public int Id { get => _id; }
     }
 }

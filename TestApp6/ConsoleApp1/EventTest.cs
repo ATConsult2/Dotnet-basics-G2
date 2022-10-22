@@ -9,7 +9,7 @@ namespace andestech.learning2022.krasn
 {
     internal class EventTest
     {
-        static public void Main(string[] args)
+        static public void Main2(string[] args)
         {
             // Program.Main2(args); // Delegate and Calc test
 
